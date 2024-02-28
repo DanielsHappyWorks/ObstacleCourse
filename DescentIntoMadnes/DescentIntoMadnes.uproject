@@ -17,6 +17,7 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+<<<<<<< HEAD
 		},
 		{
 			"Name": "VisualStudioTools",
@@ -25,6 +26,8 @@
 			"SupportedTargetPlatforms": [
 				"Win64"
 			]
+=======
+>>>>>>> ca6f53ef9505816e5542ad926f5f64f5c92529d0
 		}
 	]
 }
