@@ -1353,3 +1353,461 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.03.03-10.40.16:940][818]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
 [2024.03.03-10.40.16:946][818]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
 [2024.03.03-10.40.17:011][823]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2024.03.03-10.41.24:462][876]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-10.41.24:469][876]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-10.41.24:469][876]PIE: New page: PIE session: GrayBox (3 Mar 2024, 10:41:24)
+[2024.03.03-10.41.24:469][876]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.41.24:471][876]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002195s)
+[2024.03.03-10.41.24:471][876]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/GrayBox.GrayBox to /Game/Scenes/UEDPIE_0_GrayBox.GrayBox (0.002227s)
+[2024.03.03-10.41.24:476][876]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.03.03-10.41.24:477][876]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.41.24:477][876]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.41.24:477][876]LogAIModule: Creating AISystem for world GrayBox
+[2024.03.03-10.41.24:477][876]LogPlayLevel: PIE: World Init took: (0.000729s)
+[2024.03.03-10.41.24:477][876]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.03.03-10.41.24:477][876]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-10.41.24:477][876]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-10.41.24:477][876]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-10.41.24:478][876]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-10.41.24:478][876]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-10.41.24:478][876]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-10.41.24:478][876]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-10.41.24:478][876]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-10.41.24:478][876]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-10.41.24:478][876]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-10.41.24:478][876]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-10.41.24:480][876]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-10.41.24:493][876]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (Plantronics BT600)
+[2024.03.03-10.41.24:494][876]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-10.41.24:494][876]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-10.41.24:494][876]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-10.41.24:494][876]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.03.03-10.41.24:494][876]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.03.03-10.41.24:496][876]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.03.03-10.41.24:496][876]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.03.03-10.41.24:496][876]LogInit: FAudioDevice initialized with ID 4.
+[2024.03.03-10.41.24:496][876]LogAudio: Display: Audio Device (ID: 4) registered with world 'GrayBox'.
+[2024.03.03-10.41.24:496][876]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.03.03-10.41.24:498][876]LogLoad: Game class is 'DescentIntoMadnessGameMode'
+[2024.03.03-10.41.24:500][876]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_14.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.41.24:500][876]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.41.24:500][876]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_24.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.41.24:500][876]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_GrayBox.GrayBox up for play (max tick rate 0) at 2024.03.03-10.41.24
+[2024.03.03-10.41.24:500][876]LogWorld: Bringing up level for play took: 0.001259
+[2024.03.03-10.41.24:502][876]LogOnline: OSS: Created online subsystem instance for: :Context_3
+[2024.03.03-10.41.24:505][876]PIE: Server logged in
+[2024.03.03-10.41.24:505][876]PIE: Play in editor total start time 0.037 seconds.
+[2024.03.03-10.41.35:671][199]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.41.35:671][199]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.41.35:671][199]LogWorld: UWorld::CleanupWorld for GrayBox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.41.35:671][199]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.41.35:674][199]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-10.41.35:677][199]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.41.35:680][199]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.41.35:680][199]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.03.03-10.41.35:680][199]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.03.03-10.41.35:682][199]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.03.03-10.41.35:688][199]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.03.03-10.41.35:750][202]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2024.03.03-10.42.07:572][415]LogDerivedDataCache: C:/Users/Daniel/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:13.107 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 7077 files in 9044 folders with total size 492 MiB.
+[2024.03.03-10.42.35:994][187]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2024.03.03-10.42.36:017][187]LogContentBrowser: Creating deferred item: NewFolder
+[2024.03.03-10.42.36:026][188]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2024.03.03-10.42.40:596][737]LogContentBrowser: Attempting asset rename: NewFolder -> UserInterface
+[2024.03.03-10.42.40:596][737]LogContentBrowser: End creating deferred item NewFolder
+[2024.03.03-10.42.51:652][973]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2024.03.03-10.42.51:676][974]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.43.24:255][509]LogSlate: Warning: Unable to rasterize '../../../Engine/Content/Editor/Slate/Starship/AssetIcons/SpecularProfile_64.svg'. File could not be found
+[2024.03.03-10.44.47:903][556]LogSlate: Window 'Pick Parent Class for New Widget Blueprint' being destroyed
+[2024.03.03-10.44.47:915][556]LogContentBrowser: Deferred new asset file creation: NewWidgetBlueprint
+[2024.03.03-10.44.47:918][556]LogContentBrowser: Creating deferred item: NewWidgetBlueprint
+[2024.03.03-10.44.47:942][558]LogContentBrowser: Renaming the item being created (Deferred Item: NewWidgetBlueprint).
+[2024.03.03-10.44.58:172][786]LogContentBrowser: Attempting asset rename: NewWidgetBlueprint -> GrayBoxInterface
+[2024.03.03-10.44.58:184][786]LogContentBrowser: End creating deferred item NewWidgetBlueprint
+[2024.03.03-10.45.04:565][ 71]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface
+[2024.03.03-10.45.04:565][ 71]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.45.04:565][ 71]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.45.04:578][ 71]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.45.04:578][ 71]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.45.04:585][ 71]LogSlate: Warning: The command 'UMGEditor.OpenAnimDrawer' has the same default chord as 'EditorViewport.Next' [Ctrl+Shift+Space Bar]
+[2024.03.03-10.45.04:586][ 71]LogSlate: Warning: The command 'BlueprintEditorSpawnNodes.AddActorRefAction->CommandInfo' has the same default chord as 'BlueprintEditorSpawnNodes.(Class=/Script/BlueprintGraph.K2Node_Knot Key=R Shift=false Ctrl=false Alt=false)' [R]
+[2024.03.03-10.45.05:323][ 71]LogSlate: Took 0.000144 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.03.03-10.45.05:332][ 71]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find SlateColor 'Foreground'.'
+[2024.03.03-10.45.05:337][ 71]LogSlate: Took 0.004292 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2024.03.03-10.47.24:747][508]BlueprintLog: New page: Compile GrayBoxInterface
+[2024.03.03-10.47.24:789][508]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2024.03.03-10.48.13:607][925]LogEditorTransaction: Undo Edit Bottom
+[2024.03.03-10.48.14:771][987]Cmd: TRANSACTION UNDO
+[2024.03.03-10.48.14:771][987]LogEditorTransaction: Undo Edit Right
+[2024.03.03-10.48.41:465][417]BlueprintLog: New page: Compile GrayBoxInterface
+[2024.03.03-10.48.41:487][417]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.03.03-10.49.12:792][678]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.03.03-10.49.45:417][600]LogSlate: Window 'Color Picker' being destroyed
+[2024.03.03-10.49.55:910][490]LogSlate: Window 'Color Picker' being destroyed
+[2024.03.03-10.50.23:316][382]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2024.03.03-10.50.23:317][382]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Scenes/GrayBox' took 0.017
+[2024.03.03-10.50.23:318][382]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/UserInterface/GrayBoxInterface] ([2] browsable assets)...
+[2024.03.03-10.50.23:321][382]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface]
+[2024.03.03-10.50.23:321][382]OBJ SavePackage: Finished generating thumbnails for package [/Game/UserInterface/GrayBoxInterface]
+[2024.03.03-10.50.23:328][382]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.007423 seconds
+[2024.03.03-10.50.23:333][382]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/UserInterface/GrayBoxInterface_Auto1
+[2024.03.03-10.50.23:333][382]LogSavePackage: Moving '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/GrayBoxInterface_Auto15EF2553C41D8A2D5743F70A5282D3502.tmp' to '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/Autosaves/Game/UserInterface/GrayBoxInterface_Auto1.uasset'
+[2024.03.03-10.50.23:334][382]LogFileHelpers: Auto-saving content packages took 0.016
+[2024.03.03-10.50.29:319][926]BlueprintLog: New page: Compile GrayBoxInterface
+[2024.03.03-10.50.29:341][926]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2024.03.03-10.50.30:118][986]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-10.50.30:187][986]LogSavePackage: Moving output files for package: /Game/UserInterface/GrayBoxInterface
+[2024.03.03-10.50.30:187][986]LogSavePackage: Moving '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/GrayBoxInterfaceA4A38255455C50F36C93ADB198118746.tmp' to '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Content/UserInterface/GrayBoxInterface.uasset'
+[2024.03.03-10.50.30:199][986]LogFileHelpers: InternalPromptForCheckoutAndSave took 79 ms
+[2024.03.03-10.50.30:200][986]AssetCheck: New page: Asset Save: GrayBoxInterface
+[2024.03.03-10.50.30:200][986]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface
+[2024.03.03-10.50.31:726][118]LogSlate: Window 'GrayBoxInterface' being destroyed
+[2024.03.03-10.50.31:734][118]LogSlate: Window 'GrayBoxInterface' being destroyed
+[2024.03.03-10.50.31:771][118]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.50.31:771][118]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.50.31:778][118]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.50.31:778][118]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.50.35:220][508]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2024.03.03-10.50.42:220][301]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-10.50.42:227][301]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-10.50.42:227][301]PIE: New page: PIE session: GrayBox (3 Mar 2024, 10:50:42)
+[2024.03.03-10.50.42:270][301]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.50.42:273][301]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002045s)
+[2024.03.03-10.50.42:273][301]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/GrayBox.GrayBox to /Game/Scenes/UEDPIE_0_GrayBox.GrayBox (0.002086s)
+[2024.03.03-10.50.42:287][301]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.03.03-10.50.42:293][301]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.50.42:293][301]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.50.42:293][301]LogAIModule: Creating AISystem for world GrayBox
+[2024.03.03-10.50.42:294][301]LogPlayLevel: PIE: World Init took: (0.001059s)
+[2024.03.03-10.50.42:294][301]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-10.50.42:294][301]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-10.50.42:294][301]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-10.50.42:294][301]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-10.50.42:294][301]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-10.50.42:294][301]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-10.50.42:296][301]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-10.50.42:311][301]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (Plantronics BT600)
+[2024.03.03-10.50.42:312][301]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-10.50.42:312][301]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-10.50.42:312][301]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-10.50.42:312][301]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2024.03.03-10.50.42:312][301]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2024.03.03-10.50.42:314][301]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2024.03.03-10.50.42:314][301]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2024.03.03-10.50.42:314][301]LogInit: FAudioDevice initialized with ID 5.
+[2024.03.03-10.50.42:314][301]LogAudio: Display: Audio Device (ID: 5) registered with world 'GrayBox'.
+[2024.03.03-10.50.42:314][301]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2024.03.03-10.50.42:316][301]LogLoad: Game class is 'DescentIntoMadnessGameMode'
+[2024.03.03-10.50.42:316][301]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_14.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.50.42:317][301]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.50.42:317][301]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_24.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.50.42:317][301]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_GrayBox.GrayBox up for play (max tick rate 0) at 2024.03.03-10.50.42
+[2024.03.03-10.50.42:317][301]LogWorld: Bringing up level for play took: 0.001232
+[2024.03.03-10.50.42:318][301]LogOnline: OSS: Created online subsystem instance for: :Context_7
+[2024.03.03-10.50.42:322][301]PIE: Server logged in
+[2024.03.03-10.50.42:323][301]PIE: Play in editor total start time 0.097 seconds.
+[2024.03.03-10.50.44:381][532]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.50.44:381][532]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.50.44:381][532]LogWorld: UWorld::CleanupWorld for GrayBox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.50.44:381][532]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.50.44:385][532]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-10.50.44:389][532]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.50.44:401][532]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.03-10.50.44:401][532]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2024.03.03-10.50.44:401][532]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.03.03-10.50.44:402][532]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.03.03-10.50.44:406][532]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.50.44:408][532]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2024.03.03-10.50.44:463][534]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2024.03.03-10.50.54:728][690]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-10.50.54:735][690]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-10.50.54:735][690]PIE: New page: PIE session: GrayBox (3 Mar 2024, 10:50:54)
+[2024.03.03-10.50.54:771][690]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.50.54:773][690]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002041s)
+[2024.03.03-10.50.54:773][690]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/GrayBox.GrayBox to /Game/Scenes/UEDPIE_0_GrayBox.GrayBox (0.002096s)
+[2024.03.03-10.50.54:785][690]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.03.03-10.50.54:787][690]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.50.54:787][690]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.50.54:788][690]LogAIModule: Creating AISystem for world GrayBox
+[2024.03.03-10.50.54:788][690]LogPlayLevel: PIE: World Init took: (0.000997s)
+[2024.03.03-10.50.54:788][690]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-10.50.54:788][690]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-10.50.54:788][690]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-10.50.54:789][690]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-10.50.54:789][690]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-10.50.54:789][690]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-10.50.54:791][690]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-10.50.54:805][690]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (Plantronics BT600)
+[2024.03.03-10.50.54:805][690]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-10.50.54:805][690]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-10.50.54:805][690]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-10.50.54:806][690]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2024.03.03-10.50.54:806][690]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2024.03.03-10.50.54:808][690]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2024.03.03-10.50.54:808][690]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2024.03.03-10.50.54:808][690]LogInit: FAudioDevice initialized with ID 6.
+[2024.03.03-10.50.54:808][690]LogAudio: Display: Audio Device (ID: 6) registered with world 'GrayBox'.
+[2024.03.03-10.50.54:808][690]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2024.03.03-10.50.54:810][690]LogLoad: Game class is 'DescentIntoMadnessGameMode'
+[2024.03.03-10.50.54:811][690]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_14.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.50.54:811][690]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.50.54:811][690]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_24.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.50.54:811][690]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_GrayBox.GrayBox up for play (max tick rate 0) at 2024.03.03-10.50.54
+[2024.03.03-10.50.54:812][690]LogWorld: Bringing up level for play took: 0.001095
+[2024.03.03-10.50.54:813][690]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2024.03.03-10.50.54:816][690]PIE: Server logged in
+[2024.03.03-10.50.54:817][690]PIE: Play in editor total start time 0.081 seconds.
+[2024.03.03-10.50.56:111][824]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.50.56:111][824]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.50.56:111][824]LogWorld: UWorld::CleanupWorld for GrayBox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.50.56:111][824]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.50.56:114][824]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-10.50.56:118][824]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.50.56:131][824]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.50.56:131][824]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2024.03.03-10.50.56:132][824]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.03.03-10.50.56:133][824]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.03.03-10.50.56:140][824]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2024.03.03-10.50.56:180][827]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2024.03.03-10.51.52:746][ 82]LogEditorViewport: Clicking Background
+[2024.03.03-10.51.56:735][547]LogSlate: Took 0.000080 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.03.03-10.51.56:762][549]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.51.57:319][613]LogAssetEditorSubsystem: Opening Asset editor for LevelScriptBlueprint /Game/Scenes/GrayBox.GrayBox:PersistentLevel.GrayBox
+[2024.03.03-10.51.57:319][613]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.51.57:319][613]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.52.44:200][705]BlueprintLog: New page: Compile GrayBox
+[2024.03.03-10.52.44:218][705]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.03.03-10.52.45:375][828]LogSlate: Window 'GrayBox' being destroyed
+[2024.03.03-10.52.45:381][828]LogSlate: Window 'GrayBox' being destroyed
+[2024.03.03-10.52.45:386][828]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.52.45:386][828]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.52.46:373][943]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-10.52.46:380][943]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-10.52.46:380][943]PIE: New page: PIE session: GrayBox (3 Mar 2024, 10:52:46)
+[2024.03.03-10.52.46:380][943]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.52.46:383][943]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002379s)
+[2024.03.03-10.52.46:383][943]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/GrayBox.GrayBox to /Game/Scenes/UEDPIE_0_GrayBox.GrayBox (0.002497s)
+[2024.03.03-10.52.46:397][943]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.03.03-10.52.46:401][943]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.52.46:401][943]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.52.46:402][943]LogAIModule: Creating AISystem for world GrayBox
+[2024.03.03-10.52.46:402][943]LogPlayLevel: PIE: World Init took: (0.000855s)
+[2024.03.03-10.52.46:402][943]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-10.52.46:402][943]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-10.52.46:402][943]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-10.52.46:402][943]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-10.52.46:402][943]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-10.52.46:402][943]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-10.52.46:404][943]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-10.52.46:419][943]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (Plantronics BT600)
+[2024.03.03-10.52.46:419][943]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-10.52.46:419][943]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-10.52.46:419][943]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-10.52.46:421][943]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2024.03.03-10.52.46:421][943]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2024.03.03-10.52.46:422][943]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2024.03.03-10.52.46:422][943]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2024.03.03-10.52.46:422][943]LogInit: FAudioDevice initialized with ID 7.
+[2024.03.03-10.52.46:422][943]LogAudio: Display: Audio Device (ID: 7) registered with world 'GrayBox'.
+[2024.03.03-10.52.46:422][943]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2024.03.03-10.52.46:424][943]LogLoad: Game class is 'DescentIntoMadnessGameMode'
+[2024.03.03-10.52.46:425][943]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_14.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.52.46:425][943]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.52.46:425][943]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_24.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.52.46:425][943]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_GrayBox.GrayBox up for play (max tick rate 0) at 2024.03.03-10.52.46
+[2024.03.03-10.52.46:425][943]LogWorld: Bringing up level for play took: 0.001212
+[2024.03.03-10.52.46:427][943]LogOnline: OSS: Created online subsystem instance for: :Context_11
+[2024.03.03-10.52.46:431][943]PIE: Server logged in
+[2024.03.03-10.52.46:432][943]PIE: Play in editor total start time 0.051 seconds.
+[2024.03.03-10.52.48:811][212]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.52.48:811][212]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.52.48:811][212]LogWorld: UWorld::CleanupWorld for GrayBox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.52.48:812][212]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.52.48:815][212]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-10.52.48:819][212]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.52.48:831][212]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.52.48:831][212]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2024.03.03-10.52.48:831][212]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.03.03-10.52.48:832][212]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.03.03-10.52.48:838][212]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.03.03-10.52.48:892][214]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2024.03.03-10.52.54:555][868]LogAssetEditorSubsystem: Opening Asset editor for LevelScriptBlueprint /Game/Scenes/GrayBox.GrayBox:PersistentLevel.GrayBox
+[2024.03.03-10.52.54:556][868]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.52.54:556][868]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.53.18:222][222]BlueprintLog: New page: Compile GrayBox
+[2024.03.03-10.53.18:224][222]LogBlueprint: Error: [AssetLog] C:\Users\Daniel\OneDrive - Dundalk Institute of Technology\ObstacleCourse\DescentIntoMadness\Content\Scenes\GrayBox.umap: [Compiler] This blueprint (self) is not a UserWidget, therefore ' Target ' must have a connection.
+[2024.03.03-10.53.18:249][222]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.03.03-10.53.27:968][910]BlueprintLog: New page: Compile GrayBox
+[2024.03.03-10.53.27:993][910]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2024.03.03-10.53.30:525][  3]LogSlate: Window 'GrayBox' being destroyed
+[2024.03.03-10.53.30:530][  3]LogSlate: Window 'GrayBox' being destroyed
+[2024.03.03-10.53.30:535][  3]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.53.30:535][  3]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.53.31:287][ 87]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-10.53.31:294][ 87]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-10.53.31:294][ 87]PIE: New page: PIE session: GrayBox (3 Mar 2024, 10:53:31)
+[2024.03.03-10.53.31:294][ 87]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.53.31:297][ 87]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002707s)
+[2024.03.03-10.53.31:297][ 87]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/GrayBox.GrayBox to /Game/Scenes/UEDPIE_0_GrayBox.GrayBox (0.002742s)
+[2024.03.03-10.53.31:312][ 87]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2024.03.03-10.53.31:318][ 87]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.53.31:318][ 87]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.53.31:318][ 87]LogAIModule: Creating AISystem for world GrayBox
+[2024.03.03-10.53.31:318][ 87]LogPlayLevel: PIE: World Init took: (0.001025s)
+[2024.03.03-10.53.31:319][ 87]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-10.53.31:319][ 87]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-10.53.31:319][ 87]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-10.53.31:319][ 87]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-10.53.31:319][ 87]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-10.53.31:319][ 87]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-10.53.31:320][ 87]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-10.53.31:335][ 87]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (Plantronics BT600)
+[2024.03.03-10.53.31:336][ 87]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-10.53.31:336][ 87]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-10.53.31:336][ 87]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-10.53.31:336][ 87]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2024.03.03-10.53.31:336][ 87]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2024.03.03-10.53.31:338][ 87]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2024.03.03-10.53.31:338][ 87]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2024.03.03-10.53.31:338][ 87]LogInit: FAudioDevice initialized with ID 8.
+[2024.03.03-10.53.31:338][ 87]LogAudio: Display: Audio Device (ID: 8) registered with world 'GrayBox'.
+[2024.03.03-10.53.31:338][ 87]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2024.03.03-10.53.31:340][ 87]LogLoad: Game class is 'DescentIntoMadnessGameMode'
+[2024.03.03-10.53.31:341][ 87]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_14.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.53.31:341][ 87]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.53.31:341][ 87]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_24.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.53.31:341][ 87]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_GrayBox.GrayBox up for play (max tick rate 0) at 2024.03.03-10.53.31
+[2024.03.03-10.53.31:341][ 87]LogWorld: Bringing up level for play took: 0.001280
+[2024.03.03-10.53.31:343][ 87]LogOnline: OSS: Created online subsystem instance for: :Context_13
+[2024.03.03-10.53.31:347][ 87]PIE: Server logged in
+[2024.03.03-10.53.31:348][ 87]PIE: Play in editor total start time 0.054 seconds.
+[2024.03.03-10.53.49:681][271]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.53.49:681][271]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.53.49:681][271]LogWorld: UWorld::CleanupWorld for GrayBox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.53.49:682][271]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.53.49:684][271]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-10.53.49:688][271]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.53.49:701][271]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.53.49:701][271]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2024.03.03-10.53.49:702][271]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.03.03-10.53.49:703][271]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.03.03-10.53.49:710][271]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2024.03.03-10.53.49:762][273]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2024.03.03-10.54.20:908][713]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.03-10.54.20:914][713]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.03-10.54.20:915][713]PIE: New page: PIE session: GrayBox (3 Mar 2024, 10:54:20)
+[2024.03.03-10.54.20:915][713]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.54.20:918][713]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002470s)
+[2024.03.03-10.54.20:918][713]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/GrayBox.GrayBox to /Game/Scenes/UEDPIE_0_GrayBox.GrayBox (0.002555s)
+[2024.03.03-10.54.20:931][713]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.03.03-10.54.20:932][713]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.54.20:932][713]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.54.20:933][713]LogAIModule: Creating AISystem for world GrayBox
+[2024.03.03-10.54.20:933][713]LogPlayLevel: PIE: World Init took: (0.000950s)
+[2024.03.03-10.54.20:933][713]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.03.03-10.54.20:933][713]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.03-10.54.20:933][713]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.03-10.54.20:934][713]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.03-10.54.20:934][713]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.03-10.54.20:934][713]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.03-10.54.20:936][713]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.03-10.54.20:950][713]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (Plantronics BT600)
+[2024.03.03-10.54.20:950][713]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.03-10.54.20:950][713]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.03-10.54.20:950][713]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.03-10.54.20:951][713]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=9
+[2024.03.03-10.54.20:951][713]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=9
+[2024.03.03-10.54.20:953][713]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=9
+[2024.03.03-10.54.20:953][713]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=9
+[2024.03.03-10.54.20:953][713]LogInit: FAudioDevice initialized with ID 9.
+[2024.03.03-10.54.20:953][713]LogAudio: Display: Audio Device (ID: 9) registered with world 'GrayBox'.
+[2024.03.03-10.54.20:953][713]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 9
+[2024.03.03-10.54.20:955][713]LogLoad: Game class is 'DescentIntoMadnessGameMode'
+[2024.03.03-10.54.20:956][713]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_14.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.54.20:956][713]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.54.20:956][713]LogPhysics: Warning: Scale for /Game/Scenes/UEDPIE_0_GrayBox.GrayBox:PersistentLevel.StaticMeshActor_24.StaticMeshComponent0 has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.576 Z=0.648
+[2024.03.03-10.54.20:956][713]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_GrayBox.GrayBox up for play (max tick rate 0) at 2024.03.03-10.54.20
+[2024.03.03-10.54.20:956][713]LogWorld: Bringing up level for play took: 0.001324
+[2024.03.03-10.54.20:958][713]LogOnline: OSS: Created online subsystem instance for: :Context_14
+[2024.03.03-10.54.20:962][713]PIE: Server logged in
+[2024.03.03-10.54.20:963][713]PIE: Play in editor total start time 0.048 seconds.
+[2024.03.03-10.54.23:372][981]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.54.23:372][981]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_GrayBox
+[2024.03.03-10.54.23:372][981]LogWorld: UWorld::CleanupWorld for GrayBox, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.54.23:372][981]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.54.23:375][981]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.03-10.54.23:379][981]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.54.23:392][981]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.03-10.54.23:393][981]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 9
+[2024.03.03-10.54.23:393][981]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.03.03-10.54.23:394][981]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.03.03-10.54.23:400][981]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.03.03-10.54.23:450][983]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2024.03.03-10.54.29:140][591]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface
+[2024.03.03-10.54.29:141][591]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.54.29:141][591]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.54.29:149][591]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.03-10.54.29:149][591]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.03-10.55.41:373][271]LogSlate: Window 'GrayBoxInterface' being destroyed
+[2024.03.03-10.55.41:379][271]LogSlate: Window 'GrayBoxInterface' being destroyed
+[2024.03.03-10.55.41:388][271]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.55.41:388][271]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.55.41:397][271]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2024.03.03-10.55.41:397][271]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.03-10.55.54:152][796]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-10.55.54:202][796]LogSavePackage: Moving output files for package: /Game/UserInterface/GrayBoxInterface
+[2024.03.03-10.55.54:203][796]LogSavePackage: Moving '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/GrayBoxInterfaceB2485C06410C7ACEC07625B2B9C04773.tmp' to '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Content/UserInterface/GrayBoxInterface.uasset'
+[2024.03.03-10.55.54:211][796]LogFileHelpers: InternalPromptForCheckoutAndSave took 59 ms (total: 139 ms)
+[2024.03.03-10.55.54:213][796]AssetCheck: New page: Asset Save: GrayBoxInterface
+[2024.03.03-10.55.54:213][796]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface
+[2024.03.03-10.55.56:047][ 16]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-10.55.56:104][ 16]LogSavePackage: Moving output files for package: /Game/UserInterface/GrayBoxInterface
+[2024.03.03-10.55.56:105][ 16]LogSavePackage: Moving '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/GrayBoxInterfaceFE56310A4741EBAB120653A13E6C7EC9.tmp' to '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Content/UserInterface/GrayBoxInterface.uasset'
+[2024.03.03-10.55.56:113][ 16]LogFileHelpers: InternalPromptForCheckoutAndSave took 65 ms (total: 204 ms)
+[2024.03.03-10.55.56:115][ 16]AssetCheck: New page: Asset Save: GrayBoxInterface
+[2024.03.03-10.55.56:115][ 16]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface
+[2024.03.03-10.55.57:156][128]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-10.55.57:219][128]LogSavePackage: Moving output files for package: /Game/UserInterface/GrayBoxInterface
+[2024.03.03-10.55.57:220][128]LogSavePackage: Moving '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/GrayBoxInterface091F8F754A391A7FF26AA7B9C4D42F29.tmp' to '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Content/UserInterface/GrayBoxInterface.uasset'
+[2024.03.03-10.55.57:229][128]LogFileHelpers: InternalPromptForCheckoutAndSave took 72 ms (total: 277 ms)
+[2024.03.03-10.55.57:229][128]AssetCheck: New page: Asset Save: GrayBoxInterface
+[2024.03.03-10.55.57:229][128]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/UserInterface/GrayBoxInterface.GrayBoxInterface
+[2024.03.03-10.56.00:590][485]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2024.03.03-10.56.00:595][485]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.03-10.56.00:684][485]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.03.03-10.56.00:694][485]LogSavePackage: Moving output files for package: /Game/Scenes/GrayBox
+[2024.03.03-10.56.00:695][485]LogSavePackage: Moving '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Saved/GrayBox3BEA72CC48EE0CDEEAE102A01CF705C7.tmp' to '../../../../../../Users/Daniel/OneDrive - Dundalk Institute of Technology/ObstacleCourse/DescentIntoMadness/Content/Scenes/GrayBox.umap'
+[2024.03.03-10.56.00:701][485]LogFileHelpers: Saving map 'GrayBox' took 0.050
+[2024.03.03-10.56.00:710][485]LogFileHelpers: InternalPromptForCheckoutAndSave took 114 ms (total: 392 ms)
+[2024.03.03-10.56.00:714][485]AssetCheck: New page: Asset Save: GrayBox
+[2024.03.03-10.56.00:714][485]LogContentValidation: Display: Validating /Script/Engine.World /Game/Scenes/GrayBox.GrayBox
