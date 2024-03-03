@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\daniel\\onedrive - dundalk institute of technology\\obstaclecourse\\descentintomadness\\source\\descentintomadness\\descentintomadness.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\daniel\\onedrive - dundalk institute of technology\\obstaclecourse\\descentintomadness\\intermediate\\build\\win64\\x64\\descentintomadnesseditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\daniel\\onedrive - dundalk institute of technology\\obstaclecourse\\descentintomadness\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\descentintomadness\\definitions.descentintomadness.h",
+            "c:\\users\\daniel\\onedrive - dundalk institute of technology\\obstaclecourse\\descentintomadness\\source\\descentintomadness\\descentintomadness.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
