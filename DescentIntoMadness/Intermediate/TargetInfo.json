@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "DescentIntoMadness",
+			"Path": "..\\Source\\DescentIntoMadness.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "DescentIntoMadnessEditor",
+			"Path": "..\\Source\\DescentIntoMadnessEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
