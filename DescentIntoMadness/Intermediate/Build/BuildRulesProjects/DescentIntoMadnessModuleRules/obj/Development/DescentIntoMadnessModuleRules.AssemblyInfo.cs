@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DescentIntoMadnessModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2af18c1344f40263c028089a9cf9e3d1f9ad2c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14b5bc75154fd9c6d912f038a769279838eeedab")]
 [assembly: System.Reflection.AssemblyProductAttribute("DescentIntoMadnessModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DescentIntoMadnessModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

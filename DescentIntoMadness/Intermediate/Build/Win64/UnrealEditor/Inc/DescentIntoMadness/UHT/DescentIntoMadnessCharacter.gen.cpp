@@ -49,6 +49,10 @@ void EmptyLinkFunctionForGeneratedCodeDescentIntoMadnessCharacter() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_GlideAction_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_GlideAction;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
@@ -131,6 +135,20 @@ void EmptyLinkFunctionForGeneratedCodeDescentIntoMadnessCharacter() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADescentIntoMadnessCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_JumpAction_MetaData), Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_JumpAction_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_GlideAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Glide Input Action */" },
+#endif
+		{ "ModuleRelativePath", "DescentIntoMadnessCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Glide Input Action" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_GlideAction = { "GlideAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADescentIntoMadnessCharacter, GlideAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_GlideAction_MetaData), Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_GlideAction_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_MoveAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
@@ -163,6 +181,7 @@ void EmptyLinkFunctionForGeneratedCodeDescentIntoMadnessCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_FollowCamera,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_DefaultMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_JumpAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_GlideAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_MoveAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADescentIntoMadnessCharacter_Statics::NewProp_LookAction,
 	};
@@ -204,9 +223,9 @@ void EmptyLinkFunctionForGeneratedCodeDescentIntoMadnessCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Daniel_OneDrive___Dundalk_Institute_of_Technology_ObstacleCourse_DescentIntoMadness_Source_DescentIntoMadness_DescentIntoMadnessCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ADescentIntoMadnessCharacter, ADescentIntoMadnessCharacter::StaticClass, TEXT("ADescentIntoMadnessCharacter"), &Z_Registration_Info_UClass_ADescentIntoMadnessCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADescentIntoMadnessCharacter), 1761394980U) },
+		{ Z_Construct_UClass_ADescentIntoMadnessCharacter, ADescentIntoMadnessCharacter::StaticClass, TEXT("ADescentIntoMadnessCharacter"), &Z_Registration_Info_UClass_ADescentIntoMadnessCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADescentIntoMadnessCharacter), 4007440831U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Daniel_OneDrive___Dundalk_Institute_of_Technology_ObstacleCourse_DescentIntoMadness_Source_DescentIntoMadness_DescentIntoMadnessCharacter_h_18972267(TEXT("/Script/DescentIntoMadness"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Daniel_OneDrive___Dundalk_Institute_of_Technology_ObstacleCourse_DescentIntoMadness_Source_DescentIntoMadness_DescentIntoMadnessCharacter_h_4078678966(TEXT("/Script/DescentIntoMadness"),
 		Z_CompiledInDeferFile_FID_Users_Daniel_OneDrive___Dundalk_Institute_of_Technology_ObstacleCourse_DescentIntoMadness_Source_DescentIntoMadness_DescentIntoMadnessCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Daniel_OneDrive___Dundalk_Institute_of_Technology_ObstacleCourse_DescentIntoMadness_Source_DescentIntoMadness_DescentIntoMadnessCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

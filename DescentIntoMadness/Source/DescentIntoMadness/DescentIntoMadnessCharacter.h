@@ -36,6 +36,10 @@ class ADescentIntoMadnessCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* JumpAction;
 
+	/** Glide Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* GlideAction;
+
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
@@ -43,6 +47,13 @@ class ADescentIntoMadnessCharacter : public ACharacter
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
+
+	bool bIsGliding = false;
+
+	FVector CurrentPosition;
+	FVector PreviousPosition;
+
+	UStaticMeshComponent* Umbrella;
 
 public:
 	ADescentIntoMadnessCharacter();
@@ -55,7 +66,10 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-			
+
+	void Glide();
+	void StopGlide();
+	bool IsFalling();
 
 protected:
 	// APawn interface
@@ -63,6 +77,8 @@ protected:
 	
 	// To add mapping context
 	virtual void BeginPlay();
+
+	virtual void Tick(float DeltaTime);
 
 public:
 	/** Returns CameraBoom subobject **/

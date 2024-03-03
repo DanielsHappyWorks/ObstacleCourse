@@ -52,6 +52,10 @@ ADescentIntoMadnessCharacter::ADescentIntoMadnessCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+
+
+	Umbrella = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Umbrella"));
+	Umbrella->SetVisibility(false);
 }
 
 void ADescentIntoMadnessCharacter::BeginPlay()
@@ -67,6 +71,25 @@ void ADescentIntoMadnessCharacter::BeginPlay()
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
+
+	CurrentPosition = GetActorLocation();
+}
+
+void ADescentIntoMadnessCharacter::Tick(float DeltaTime)
+{
+	// Call the base class  
+	Super::Tick(DeltaTime);
+
+	PreviousPosition = CurrentPosition;
+	CurrentPosition = GetActorLocation();
+
+	if (bIsGliding) {
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("TODO: Is Gliding"));
+	}
+
+	if(!IsFalling()) {
+		StopGlide();
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -80,6 +103,10 @@ void ADescentIntoMadnessCharacter::SetupPlayerInputComponent(UInputComponent* Pl
 		// Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
+
+		// Gliding
+		EnhancedInputComponent->BindAction(GlideAction, ETriggerEvent::Started, this, &ADescentIntoMadnessCharacter::Glide);
+		EnhancedInputComponent->BindAction(GlideAction, ETriggerEvent::Completed, this, &ADescentIntoMadnessCharacter::StopGlide);
 
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ADescentIntoMadnessCharacter::Move);
@@ -127,4 +154,35 @@ void ADescentIntoMadnessCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void ADescentIntoMadnessCharacter::Glide()
+{
+	if (IsFalling()) {
+		bIsGliding = true;
+		//start gliding
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("TODO: Started Gliding"));
+		Umbrella->SetVisibility(true);
+		GetCharacterMovement()->AirControl = 0.9f;
+		GetCharacterMovement()->GravityScale = 0.1f;
+		GetCharacterMovement()->MaxAcceleration = 1024;
+		GetCharacterMovement()->MaxWalkSpeed = 600;
+		GetCharacterMovement()->BrakingDecelerationFalling = 350.f;
+	}
+}
+
+void ADescentIntoMadnessCharacter::StopGlide()
+{
+	//reset gliding
+	bIsGliding = false;
+	Umbrella->SetVisibility(false);
+	GetCharacterMovement()->AirControl = 0.35f;
+	GetCharacterMovement()->GravityScale = 1.0f;
+	GetCharacterMovement()->MaxAcceleration = 2048.0f;
+	GetCharacterMovement()->MaxWalkSpeed = 500.f;
+	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
+}
+
+bool ADescentIntoMadnessCharacter::IsFalling() {
+	return (CurrentPosition.Z - PreviousPosition.Z) != 0;
 }
