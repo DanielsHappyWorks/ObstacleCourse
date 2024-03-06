@@ -41,6 +41,10 @@
 *.VC.db
 *.VC.opendb
 
+# Ignore Krita Files
+*.kra
+*.kra~
+
 # Precompiled Assets
 DescentIntoMadness/SourceArt/**/*.png
 DescentIntoMadness/SourceArt/**/*.tga
