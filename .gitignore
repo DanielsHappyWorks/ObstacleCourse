@@ -79,3 +79,6 @@ DescentIntoMadness/Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DescentIntoMadness/DerivedDataCache/*
+
+# Ignore blender files
+Blender/*
