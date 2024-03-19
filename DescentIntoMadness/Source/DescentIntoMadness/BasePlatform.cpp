@@ -16,6 +16,27 @@ void ABasePlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	StartLocation = GetActorLocation();
+
+	for (int i = 0; i < CollectableTypes.Num(); i++)
+	{
+		if (CollectableTypes[i]) {
+			FActorSpawnParameters SpawnInfo;
+			SpawnInfo.Owner = this;
+			ACollectable* CollectableRef = GetWorld()->SpawnActor<ACollectable>(CollectableTypes[i], Collectablepositions[i]);
+			CollectableRef->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+		}
+	}
+
+	/*
+	if (CollectableBP) {
+		FActorSpawnParameters SpawnInfo;
+		SpawnInfo.Owner = this;
+		RootComponent->GetChildComponent(0)->GetRelativeTransform();
+		//SpawnInfo.OverrideParentComponent = GetRootComponent();
+		ACollectable* CollectableRef = GetWorld()->SpawnActor<ACollectable>(CollectableBP, CollectablePos, SpawnInfo);
+		CollectableRef->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+	}
+	*/
 }
 
 // Called every frame

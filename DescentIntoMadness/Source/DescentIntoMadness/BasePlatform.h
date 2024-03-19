@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Collectable.h"
 #include "BasePlatform.generated.h"
 
 UCLASS()
@@ -35,6 +36,18 @@ private:
 	FRotator RotationVelocity = FRotator(0, 0, 0);
 
 	FVector StartLocation;
+
+	UPROPERTY(EditAnywhere, Category = "Collectable")
+	TSubclassOf<ACollectable> CollectableBP;
+	
+	UPROPERTY(EditAnywhere, Category = "Collectable")
+	FTransform CollectablePos;
+
+	UPROPERTY(EditAnywhere, Category = "Collectable")
+	TArray<TSubclassOf<ACollectable>> CollectableTypes;
+
+	UPROPERTY(EditAnywhere, Category = "Collectable")
+	TArray<FTransform> Collectablepositions;
 
 	void MovePlatform(float DeltaTime);
 
