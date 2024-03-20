@@ -48,15 +48,28 @@ class ADescentIntoMadnessCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
-	bool bIsGliding = false;
-
+	UPROPERTY(Category = "Position", VisibleAnywhere)
 	FVector CurrentPosition;
+
+	UPROPERTY(Category = "Position", VisibleAnywhere)
 	FVector PreviousPosition;
+
+	UPROPERTY(Category = "Gliding", VisibleAnywhere)
+	bool bIsGliding = false;
 
 	UStaticMeshComponent* Umbrella;
 
 public:
 	ADescentIntoMadnessCharacter();
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	int Score = 0;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	int Health = 100;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	int Durability = 100;
 	
 
 protected:

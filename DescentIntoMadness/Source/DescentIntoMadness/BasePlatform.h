@@ -38,12 +38,6 @@ private:
 	FVector StartLocation;
 
 	UPROPERTY(EditAnywhere, Category = "Collectable")
-	TSubclassOf<ACollectable> CollectableBP;
-	
-	UPROPERTY(EditAnywhere, Category = "Collectable")
-	FTransform CollectablePos;
-
-	UPROPERTY(EditAnywhere, Category = "Collectable")
 	TArray<TSubclassOf<ACollectable>> CollectableTypes;
 
 	UPROPERTY(EditAnywhere, Category = "Collectable")
