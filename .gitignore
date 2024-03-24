@@ -82,3 +82,6 @@ DescentIntoMadness/DerivedDataCache/*
 
 # Ignore blender files
 Blender/*
+
+# Ignore builds
+Executables/*
