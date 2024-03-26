@@ -62,14 +62,22 @@ class ADescentIntoMadnessCharacter : public ACharacter
 public:
 	ADescentIntoMadnessCharacter();
 
+	void GroundMovement();
+
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
 	int Score = 0;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
-	int Health = 100;
+	float Health = 1;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
-	int Durability = 100;
+	float Durability = 1;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	float DurabilityUsageSpeed = 0.18;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	float DurabilityRecoverySpeed = 0.42;
 	
 
 protected:
@@ -81,8 +89,8 @@ protected:
 	void Look(const FInputActionValue& Value);
 
 	void Glide();
+	void GlideMovement();
 	void StopGlide();
-	bool IsFalling();
 
 protected:
 	// APawn interface
@@ -92,6 +100,10 @@ protected:
 	virtual void BeginPlay();
 
 	virtual void Tick(float DeltaTime);
+
+	void TakeDamage();
+
+	void GlideTick(float DeltaTime);
 
 public:
 	/** Returns CameraBoom subobject **/

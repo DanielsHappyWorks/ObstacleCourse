@@ -30,19 +30,12 @@ ADescentIntoMadnessCharacter::ADescentIntoMadnessCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 500.0f, 0.0f); // ...at this rotation rate
 
-	// Note: For faster iteration times these variables, and many more, can be tweaked in the Character Blueprint
-	// instead of recompiling to adjust them
-	GetCharacterMovement()->JumpZVelocity = 700.f;
-	GetCharacterMovement()->AirControl = 0.35f;
-	GetCharacterMovement()->MaxWalkSpeed = 500.f;
-	GetCharacterMovement()->MinAnalogWalkSpeed = 20.f;
-	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
-	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
+	GroundMovement();
 
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 400.0f; // The camera follows at this distance behind the character	
+	CameraBoom->TargetArmLength = 600.0f; // The camera follows at this distance behind the character	
 	CameraBoom->bUsePawnControlRotation = true; // Rotate the arm based on the controller
 
 	// Create a follow camera
@@ -56,6 +49,20 @@ ADescentIntoMadnessCharacter::ADescentIntoMadnessCharacter()
 
 	Umbrella = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Umbrella"));
 	Umbrella->SetVisibility(false);
+}
+
+void ADescentIntoMadnessCharacter::GroundMovement()
+{
+	// Note: For faster iteration times these variables, and many more, can be tweaked in the Character Blueprint
+	// instead of recompiling to adjust them
+	GetCharacterMovement()->JumpZVelocity = 600.f;
+	GetCharacterMovement()->AirControl = 0.35f;
+	GetCharacterMovement()->MaxWalkSpeed = 500.f;
+	GetCharacterMovement()->MinAnalogWalkSpeed = 20.f;
+	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
+	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
+	GetCharacterMovement()->GravityScale = 1.0f;
+	GetCharacterMovement()->MaxAcceleration = 2048;
 }
 
 void ADescentIntoMadnessCharacter::BeginPlay()
@@ -83,12 +90,47 @@ void ADescentIntoMadnessCharacter::Tick(float DeltaTime)
 	PreviousPosition = CurrentPosition;
 	CurrentPosition = GetActorLocation();
 
+	GlideTick(DeltaTime);
+
+	TakeDamage();
+}
+
+void ADescentIntoMadnessCharacter::TakeDamage()
+{
+	//TODO fix <- Appy when the character hits the ground with a certain speed
+	Health = 1;
+	float velocity = GetVelocity().Z * -1;
+	if (velocity > 600) {
+		Health -= velocity / 2000;
+	}
+}
+
+void ADescentIntoMadnessCharacter::GlideTick(float DeltaTime)
+{
+	//UE5 uses 0-1 for a percentage value?! Why?!
+	int maxDurability = 1;
 	if (bIsGliding) {
-		UE_LOG(LogTemplateCharacter, Warning, TEXT("TODO: Is Gliding"));
+		Durability -= maxDurability * DurabilityUsageSpeed * DeltaTime;
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("Is Gliding"));
 	}
 
-	if(!IsFalling()) {
+	if (Durability <= 0) {
 		StopGlide();
+	}
+
+	if (!GetCharacterMovement()->IsFalling()) {
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("Is Not Falling"));
+		Durability = Durability <= maxDurability ? Durability + maxDurability * DurabilityRecoverySpeed * DeltaTime : maxDurability;
+		StopGlide();
+	}
+
+	if (bIsGliding) {
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("Durability: %f, Falling Speed %f "), Durability, GetVelocity().Z);
+		//decelerate the falling speed
+		//If we go over the gliding speed apply a force to slow down of hald the current velocity to slow down
+		if (GetVelocity().Z * -1 > GetCharacterMovement()->BrakingDecelerationFalling) {
+			GetCharacterMovement()->AddImpulse(FVector(0, 0, GetVelocity().Z * -1 / 2));
+		}
 	}
 }
 
@@ -158,17 +200,27 @@ void ADescentIntoMadnessCharacter::Look(const FInputActionValue& Value)
 
 void ADescentIntoMadnessCharacter::Glide()
 {
-	if (IsFalling()) {
+	if (Durability <= 0) {
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("Out of Durability"));
+		return;
+	}
+
+	if (GetCharacterMovement()->IsFalling()) {
 		bIsGliding = true;
 		//start gliding
-		UE_LOG(LogTemplateCharacter, Warning, TEXT("TODO: Started Gliding"));
+		UE_LOG(LogTemplateCharacter, Warning, TEXT("Started Gliding"));
 		Umbrella->SetVisibility(true);
-		GetCharacterMovement()->AirControl = 0.9f;
-		GetCharacterMovement()->GravityScale = 0.1f;
-		GetCharacterMovement()->MaxAcceleration = 1024;
-		GetCharacterMovement()->MaxWalkSpeed = 600;
-		GetCharacterMovement()->BrakingDecelerationFalling = 350.f;
+		GlideMovement();
 	}
+}
+
+void ADescentIntoMadnessCharacter::GlideMovement()
+{
+	GetCharacterMovement()->AirControl = 0.9f;
+	GetCharacterMovement()->GravityScale = 0.1f;
+	GetCharacterMovement()->MaxAcceleration = 1024;
+	GetCharacterMovement()->MaxWalkSpeed = 600;
+	GetCharacterMovement()->BrakingDecelerationFalling = 350.f;
 }
 
 void ADescentIntoMadnessCharacter::StopGlide()
@@ -176,13 +228,5 @@ void ADescentIntoMadnessCharacter::StopGlide()
 	//reset gliding
 	bIsGliding = false;
 	Umbrella->SetVisibility(false);
-	GetCharacterMovement()->AirControl = 0.35f;
-	GetCharacterMovement()->GravityScale = 1.0f;
-	GetCharacterMovement()->MaxAcceleration = 2048.0f;
-	GetCharacterMovement()->MaxWalkSpeed = 500.f;
-	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
-}
-
-bool ADescentIntoMadnessCharacter::IsFalling() {
-	return (CurrentPosition.Z - PreviousPosition.Z) != 0;
+	GroundMovement();
 }

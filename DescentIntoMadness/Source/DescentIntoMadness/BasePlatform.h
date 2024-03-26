@@ -38,6 +38,9 @@ private:
 	FVector StartLocation;
 
 	UPROPERTY(EditAnywhere, Category = "Collectable")
+	bool CollectablesEnabled = true;
+
+	UPROPERTY(EditAnywhere, Category = "Collectable")
 	TArray<TSubclassOf<ACollectable>> CollectableTypes;
 
 	UPROPERTY(EditAnywhere, Category = "Collectable")
@@ -50,5 +53,7 @@ private:
 	bool ShouldPlatformReturn() const;
 
 	float GetDistanceTraveled() const;
+
+	void SpawnCollectables();
 
 };
