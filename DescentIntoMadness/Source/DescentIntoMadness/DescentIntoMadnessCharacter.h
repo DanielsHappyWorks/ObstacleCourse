@@ -54,9 +54,6 @@ class ADescentIntoMadnessCharacter : public ACharacter
 	UPROPERTY(Category = "Position", VisibleAnywhere)
 	FVector PreviousPosition;
 
-	UPROPERTY(Category = "Gliding", VisibleAnywhere)
-	bool bIsGliding = false;
-
 	UStaticMeshComponent* Umbrella;
 
 public:
@@ -90,6 +87,9 @@ public:
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
 	float DurabilityRecoverySpeed = 0.42;
+
+	UPROPERTY(Category = "Gliding", EditAnywhere, BlueprintReadWrite)
+	bool IsGliding = false;
 	
 
 protected:

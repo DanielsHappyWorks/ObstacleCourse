@@ -120,7 +120,7 @@ void ADescentIntoMadnessCharacter::GlideTick(float DeltaTime)
 {
 	//UE5 uses 0-1 for a percentage value?! Why?!
 	int maxDurability = 1;
-	if (bIsGliding) {
+	if (IsGliding) {
 		Durability -= maxDurability * DurabilityUsageSpeed * DeltaTime;
 		UE_LOG(LogTemplateCharacter, Warning, TEXT("Is Gliding"));
 	}
@@ -135,7 +135,7 @@ void ADescentIntoMadnessCharacter::GlideTick(float DeltaTime)
 		StopGlide();
 	}
 
-	if (bIsGliding) {
+	if (IsGliding) {
 		UE_LOG(LogTemplateCharacter, Warning, TEXT("Durability: %f, Falling Speed %f "), Durability, GetVelocity().Z);
 		//decelerate the falling speed
 		//If we go over the gliding speed apply a force to slow down of hald the current velocity to slow down
@@ -217,7 +217,7 @@ void ADescentIntoMadnessCharacter::Glide()
 	}
 
 	if (GetCharacterMovement()->IsFalling()) {
-		bIsGliding = true;
+		IsGliding = true;
 		//start gliding
 		UE_LOG(LogTemplateCharacter, Warning, TEXT("Started Gliding"));
 		Umbrella->SetVisibility(true);
@@ -237,7 +237,7 @@ void ADescentIntoMadnessCharacter::GlideMovement()
 void ADescentIntoMadnessCharacter::StopGlide()
 {
 	//reset gliding
-	bIsGliding = false;
+	IsGliding = false;
 	Umbrella->SetVisibility(false);
 	GroundMovement();
 }
