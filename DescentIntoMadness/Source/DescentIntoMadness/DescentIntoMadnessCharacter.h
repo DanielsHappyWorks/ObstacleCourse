@@ -74,10 +74,10 @@ public:
 	float CalculatedDamage = 0;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
-	float MinDamageVelocity = 1000;
+	float MinDamageVelocity = 1200;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
-	float MaxDamageVelocity = 2300;
+	float MaxDamageVelocity = 2000;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
 	bool IsDead = false;

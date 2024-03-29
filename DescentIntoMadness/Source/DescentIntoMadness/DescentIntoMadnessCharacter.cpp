@@ -102,7 +102,8 @@ void ADescentIntoMadnessCharacter::TakeDamage()
 		//TODO make non linear?
 		float velocity = GetVelocity().Z * -1;
 		if (velocity > MinDamageVelocity) {
-			CalculatedDamage = velocity / MaxDamageVelocity;
+			//Take away MinDamageVelocity to for a better approximation of a value from 0-1
+			CalculatedDamage = (velocity - MinDamageVelocity) / MaxDamageVelocity;
 		}
 	} else {
 		//Apply damage after falling
