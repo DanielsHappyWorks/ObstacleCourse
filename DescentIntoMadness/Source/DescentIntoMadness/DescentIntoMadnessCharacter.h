@@ -71,6 +71,18 @@ public:
 	float Health = 1;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	float CalculatedDamage = 0;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	float MinDamageVelocity = 1000;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	float MaxDamageVelocity = 2300;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
+	bool IsDead = false;
+
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
 	float Durability = 1;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)

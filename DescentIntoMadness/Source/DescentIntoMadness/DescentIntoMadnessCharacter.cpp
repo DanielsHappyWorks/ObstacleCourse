@@ -97,11 +97,21 @@ void ADescentIntoMadnessCharacter::Tick(float DeltaTime)
 
 void ADescentIntoMadnessCharacter::TakeDamage()
 {
-	//TODO fix <- Appy when the character hits the ground with a certain speed
-	Health = 1;
-	float velocity = GetVelocity().Z * -1;
-	if (velocity > 600) {
-		Health -= velocity / 2000;
+	if (GetCharacterMovement()->IsFalling()) {
+		//Calculate damage based on velocity
+		//TODO make non linear?
+		float velocity = GetVelocity().Z * -1;
+		if (velocity > MinDamageVelocity) {
+			CalculatedDamage = velocity / MaxDamageVelocity;
+		}
+	} else {
+		//Apply damage after falling
+		Health -= CalculatedDamage;
+		CalculatedDamage = 0;
+
+		if (Health <= 0) {
+			IsDead = true;
+		}
 	}
 }
 
