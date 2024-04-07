@@ -87,7 +87,7 @@ void ABasePlatform::HandleTimeToLive(float DeltaTime) {
 	}
 
 	if (IsReadyForDestruction()) {
-		TimeToLive -= 10 * DeltaTime;
+		TimeToLive -= 16 * DeltaTime;
 	}
 	if (TimeToLive <= 0) {
 		for (ACollectable* Collectable : Collectables) {
@@ -105,10 +105,11 @@ bool ABasePlatform::IsReadyForDestruction() {
 	}
 
 	for (ABasePlatform* Platform : PreviousPlatforms) {
-		if (Platform != nullptr) {
+		if (IsValid(Platform)) {
 			return false;
 		}
 	}
+
 	return true;
 }
 
