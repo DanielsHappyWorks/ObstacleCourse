@@ -13,7 +13,7 @@ ACollectable::ACollectable()
 	PrimaryActorTick.bCanEverTick = true;
 
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision Box"));
-	CollisionBox->SetBoxExtent(FVector(60, 60, 60));
+	CollisionBox->SetBoxExtent(FVector(50, 50, 50));
 	CollisionBox->SetCollisionProfileName("Trigger");
 	RootComponent = CollisionBox;
 
@@ -24,7 +24,7 @@ ACollectable::ACollectable()
 void ACollectable::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	CollectSound = LoadObject<USoundBase>(NULL, TEXT("/Game/Audio/SC_Collectable.SC_Collectable"));
 }
 
 // Called every frame
@@ -43,6 +43,10 @@ void ACollectable::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 		if (ADescentIntoMadnessCharacter* Character = Cast<ADescentIntoMadnessCharacter>(OtherActor))
 		{
 			Character->Score = Character->Score + Value;
+			//Play Sound
+			if (CollectSound) {
+				UGameplayStatics::PlaySound2D(this, CollectSound);
+			}
 			Destroy();
 		}
 	}

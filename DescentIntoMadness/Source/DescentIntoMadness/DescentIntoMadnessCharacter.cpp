@@ -80,6 +80,8 @@ void ADescentIntoMadnessCharacter::BeginPlay()
 	}
 
 	CurrentPosition = GetActorLocation();
+
+	UmbrellaSound = LoadObject<USoundBase>(NULL, TEXT("/Game/Audio/SC_Umbrella.SC_Umbrella"));
 }
 
 void ADescentIntoMadnessCharacter::Tick(float DeltaTime)
@@ -222,6 +224,10 @@ void ADescentIntoMadnessCharacter::Glide()
 		UE_LOG(LogTemplateCharacter, Warning, TEXT("Started Gliding"));
 		Umbrella->SetVisibility(true);
 		GlideMovement();
+		//Play Sound
+		if (UmbrellaSound) {
+			UGameplayStatics::PlaySound2D(this, UmbrellaSound);
+		}
 	}
 }
 
@@ -236,8 +242,16 @@ void ADescentIntoMadnessCharacter::GlideMovement()
 
 void ADescentIntoMadnessCharacter::StopGlide()
 {
+	if (!IsGliding) {
+		return;
+	}
+
 	//reset gliding
 	IsGliding = false;
 	Umbrella->SetVisibility(false);
 	GroundMovement();
+	//Play Sound
+	if (UmbrellaSound) {
+		UGameplayStatics::PlaySound2D(this, UmbrellaSound);
+	}
 }

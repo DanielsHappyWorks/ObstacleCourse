@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "Kismet/GameplayStatics.h"
 #include "DescentIntoMadnessCharacter.generated.h"
 
 class USpringArmComponent;
@@ -90,6 +91,9 @@ public:
 
 	UPROPERTY(Category = "Gliding", EditAnywhere, BlueprintReadWrite)
 	bool IsGliding = false;
+
+	UPROPERTY(EditAnywhere, Category = "Gliding")
+	USoundBase* UmbrellaSound;
 	
 
 protected:

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Kismet/GameplayStatics.h"
 #include "Collectable.generated.h"
 
 UCLASS()
@@ -32,4 +33,6 @@ public:
 private:
 	UPROPERTY(EditAnywhere, Category = "Collectable")
 	int Value = 50;
+	UPROPERTY(EditAnywhere, Category = "Collectable")
+	USoundBase* CollectSound;
 };
