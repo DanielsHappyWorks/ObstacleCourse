@@ -16,20 +16,23 @@ void ABasePlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	StartLocation = GetActorLocation();
+	OriginalTimeToLive = TimeToLive;
 
 	SpawnCollectables();
 }
 
 void ABasePlatform::SpawnCollectables()
 {
+	Collectables = TArray<ACollectable*>{};
 	if (CollectablesEnabled) {
 		for (int i = 0; i < CollectableTypes.Num(); i++)
 		{
 			if (CollectableTypes[i]) {
 				FActorSpawnParameters SpawnInfo;
 				SpawnInfo.Owner = this;
-				ACollectable* CollectableRef = GetWorld()->SpawnActor<ACollectable>(CollectableTypes[i], Collectablepositions[i]);
+				ACollectable* CollectableRef = GetWorld()->SpawnActor<ACollectable>(CollectableTypes[i], CollectablePositions[i]);
 				CollectableRef->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+				Collectables.Add(CollectableRef);
 			}
 		}
 	}
@@ -42,6 +45,7 @@ void ABasePlatform::Tick(float DeltaTime)
 
 	MovePlatform(DeltaTime);
 	RotatePlatform(DeltaTime);
+	HandleTimeToLive(DeltaTime);
 }
 
 void ABasePlatform::MovePlatform(float DeltaTime)
@@ -75,4 +79,40 @@ bool ABasePlatform::ShouldPlatformReturn() const
 float ABasePlatform::GetDistanceTraveled() const
 {
 	return FVector::Dist(StartLocation, GetActorLocation());
+}
+
+void ABasePlatform::HandleTimeToLive(float DeltaTime) {
+	if (!TTLEnabled) {
+		return;
+	}
+
+	if (IsReadyForDestruction()) {
+		TimeToLive -= 10 * DeltaTime;
+	}
+	if (TimeToLive <= 0) {
+		for (ACollectable* Collectable : Collectables) {
+			if (Collectable) {
+				Collectable->Destroy();
+			}
+		}
+		Destroy();
+	}
+}
+
+bool ABasePlatform::IsReadyForDestruction() {
+	if (PreviousPlatforms.IsEmpty()) {
+		return true;
+	}
+
+	for (ABasePlatform* Platform : PreviousPlatforms) {
+		if (Platform != nullptr) {
+			return false;
+		}
+	}
+	return true;
+}
+
+float ABasePlatform::GetNormalisedTTL()
+{
+	return TimeToLive / OriginalTimeToLive;
 }

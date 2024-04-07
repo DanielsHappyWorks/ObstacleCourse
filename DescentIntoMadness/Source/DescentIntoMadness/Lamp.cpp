@@ -25,3 +25,7 @@ void ALamp::Tick(float DeltaTime)
 
 }
 
+void ALamp::SetIntensity(float i) {
+	Intensity = i;
+}
+

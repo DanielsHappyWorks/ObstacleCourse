@@ -23,4 +23,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	void SetIntensity(float Intensity);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lamp")
+	float Intensity = 1;
 };

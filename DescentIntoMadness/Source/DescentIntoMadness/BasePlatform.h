@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Collectable.h"
+#include "Lamp.h"
 #include "BasePlatform.generated.h"
 
 UCLASS()
@@ -37,6 +38,18 @@ private:
 
 	FVector StartLocation;
 
+	UPROPERTY(EditAnywhere, Category = "Time To Live")
+	bool TTLEnabled = true;
+
+	UPROPERTY(EditAnywhere, Category = "Time To Live")
+	TArray<ABasePlatform*> PreviousPlatforms;
+
+	UPROPERTY(EditAnywhere, Category = "Time To Live")
+	float TimeToLive = 100;
+
+	UPROPERTY(EditAnywhere, Category = "Time To Live")
+	float OriginalTimeToLive;
+
 	UPROPERTY(EditAnywhere, Category = "Collectable")
 	bool CollectablesEnabled = true;
 
@@ -44,7 +57,10 @@ private:
 	TArray<TSubclassOf<ACollectable>> CollectableTypes;
 
 	UPROPERTY(EditAnywhere, Category = "Collectable")
-	TArray<FTransform> Collectablepositions;
+	TArray<FTransform> CollectablePositions;
+
+	UPROPERTY(VisibleAnywhere, Category = "Collectable")
+	TArray<ACollectable*> Collectables;
 
 	void MovePlatform(float DeltaTime);
 
@@ -55,5 +71,12 @@ private:
 	float GetDistanceTraveled() const;
 
 	void SpawnCollectables();
+
+	void HandleTimeToLive(float DeltaTime);
+
+	bool IsReadyForDestruction();
+
+	UFUNCTION(BlueprintCallable)
+	float GetNormalisedTTL();
 
 };
