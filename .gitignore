@@ -46,7 +46,7 @@
 *.kra~
 
 # Ignore Screencasts
-Screencasts/*
+Screencast/*
 
 # Precompiled Assets
 DescentIntoMadness/SourceArt/**/*.png

@@ -1,0 +1,44 @@
+Do you have any Additional feedback on the demo? (5 responses)
+It's a fun demo, with a compelling game loop. I like the music and how the tone changes when you are falling down.  
+descEND pun on the game over screen was great
+It's showing a lot of promise. The music is great and it's a lot of fun trying to land on the platforms and collect stuff. There are a few things missing like a main menu screen and an ending on successful completion of the level
+Looks really good. It's not immediately obvious what's going on. I think it took me dying once or twice to realise I was taking fall damage
+Really enjoyed it, some of the spinning made me feel a little sick. :D
+
+Do you have any Additional feedback on the controls? (4 responses)
+controls are simple yet effective. Possibly speed up movement of character while falling on x axis
+Moving while falling felt clunky, like your movement was too limited
+Controls are good. There's a bit of a learning curve around the gliding, but otherwise the controls make a lot of sense.
+Controls were intuitive, I did feel I missed a lot of platforms that I thought I would have reached, but that's more then likely an experience issue
+
+Do you have any Additional feedback on the visuals? (6 responses)
+visuals are fine I would add maybe some more visuals on the bottom of the tower as grey floor is bit bland.
+Make it just a little bit brighter or use brighter colours for the character model so she stands out.
+Very trippy and fitting to the idea
+Some platforms span too fast and made me feel sick
+Very nice atmosphere, especially with the streetlights lighting up the dark tunnel. The character design is adorable and well done, and the animations are great.
+The visuals look really nice. The character goes really well with the environment and the lighting looks great
+Visuals were really nice, loved the lighting and the indication of when a platform was going to disappear
+
+Do you have any Additional feedback on the game play loop? (4 responses)
+no
+sometimes the platforms disappeared too quickly
+The game is a lot of fun. However, currently there is no real game play 'loop', unless you die. If you succeed in making it to the bottom alive, you can run around endlessly, unless you jump into the grave, which instantly kills you :D Also some of the platforms pass through the tunnel walls, out of the level.
+It's very simple but surprisingly addicting. I think with some more variety it could be really interesting. Maybe powerups or something?
+
+Is there anything that you think is missing? (7 responses)
+I would add maybe something coming from above to kill player(poison loud or something) as if player stays on platform to long as some of platforms below seem to depsawn after certain amount of time otherwise. I would also maybe add something else that can kill player apart from fall damage like a projectile or something. 
+Actual score at the end screen
+Esc screen during gameplay to pause the game
+clearer ui. took me a while to realise I had a health meter and an umbrella meter
+Giant floating models of the main character t-posing and floating upwards while you descend
+A main menu when launching the game and a win condition.
+Feedback for certain in-game events. While falling, it's difficult to know how much fall damage I was going to take on landing. The music seemed to changed based on how fast I was falling but it didn't feel like there was a direct correlation to fall damage there.
+Similarly when I hit the ground too hard it would be good if there was some feedback like a sound effect or animation from the character to show they took damage
+I am not sure to be honest, maybe more elements added as you progress, but the gameplay is solid and fun. I really like how the music lends to a sense of urgency.
+
+Is there anything that you would change? (3 responses)
+Give the player a little more time for the first island, The island disappeared by the I read the controls 
+or alternately time starts when you move the character 
+either start with a top down camera or automatically switch to it one the fall starts. Putting that job on the player is disorienting for them. A clearer indicator of when you're going too fast would be a big help. The current audio cue is a bit hard to pin down so maybe a more visual cue would work better.
+Not sure, maybe change the timer for the umbrella use, to a color change on the umbrella itself, make it more visual. 
