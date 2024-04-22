@@ -42,7 +42,7 @@ void ACollectable::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
 		if (ADescentIntoMadnessCharacter* Character = Cast<ADescentIntoMadnessCharacter>(OtherActor))
 		{
-			Character->Score = Character->Score + Value;
+			Character->AddScore(Value);
 			//Play Sound
 			if (CollectSound) {
 				UGameplayStatics::PlaySound2D(this, CollectSound);

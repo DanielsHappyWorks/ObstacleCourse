@@ -57,13 +57,15 @@ class ADescentIntoMadnessCharacter : public ACharacter
 
 	UStaticMeshComponent* Umbrella;
 
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	int Score = 0;
+	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	int HighScore = 0;
+
 public:
 	ADescentIntoMadnessCharacter();
 
 	void GroundMovement();
-
-	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
-	int Score = 0;
 
 	UPROPERTY(Category = "Game State", EditAnywhere, BlueprintReadWrite)
 	float Health = 1;
@@ -126,5 +128,8 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	UFUNCTION(BlueprintCallable)
+	void AddScore(int ScoreToAdd);
 };
 

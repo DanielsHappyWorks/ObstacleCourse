@@ -10,6 +10,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Kismet/GameplayStatics.h"
+#include "HighScoreGameSave.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -82,6 +84,12 @@ void ADescentIntoMadnessCharacter::BeginPlay()
 	CurrentPosition = GetActorLocation();
 
 	UmbrellaSound = LoadObject<USoundBase>(NULL, TEXT("/Game/Audio/SC_Umbrella.SC_Umbrella"));
+
+	USaveGame* Slot = UGameplayStatics::LoadGameFromSlot("HighScore", 1);
+	if (Slot != nullptr) {
+		UHighScoreGameSave* highScoreSave  = Cast<UHighScoreGameSave>(Slot);
+		HighScore = highScoreSave->HighScore;
+	}
 }
 
 void ADescentIntoMadnessCharacter::Tick(float DeltaTime)
@@ -144,6 +152,17 @@ void ADescentIntoMadnessCharacter::GlideTick(float DeltaTime)
 		if (GetVelocity().Z * -1 > GetCharacterMovement()->BrakingDecelerationFalling) {
 			GetCharacterMovement()->AddImpulse(FVector(0, 0, GetVelocity().Z * -1 / 2));
 		}
+	}
+}
+
+void ADescentIntoMadnessCharacter::AddScore(int ScoreToAdd)
+{
+	Score += ScoreToAdd;
+	if (HighScore < Score) {
+		HighScore = Score;
+		UHighScoreGameSave* highScoreSave = NewObject<UHighScoreGameSave>();
+		highScoreSave->HighScore = HighScore;
+		UGameplayStatics::SaveGameToSlot(highScoreSave, "HighScore", 1);
 	}
 }
 
