@@ -125,6 +125,9 @@ void ADescentIntoMadnessCharacter::TakeDamage()
 
 		if (Health <= 0) {
 			IsDead = true;
+			//Stop player from floating into the distance when dead
+			GetCharacterMovement()->MaxAcceleration = 0;
+			GetCharacterMovement()->MaxWalkSpeed = 0;
 		}
 	}
 }
@@ -144,6 +147,7 @@ void ADescentIntoMadnessCharacter::GlideTick(float DeltaTime)
 
 	if (!GetCharacterMovement()->IsFalling()) {
 		UE_LOG(LogTemplateCharacter, Warning, TEXT("Is Not Falling"));
+		IsInitialGliding = false;
 		Durability = Durability <= maxDurability ? Durability + maxDurability * DurabilityRecoverySpeed * DeltaTime : maxDurability;
 		StopGlide();
 	}
@@ -200,7 +204,7 @@ void ADescentIntoMadnessCharacter::SetupPlayerInputComponent(UInputComponent* Pl
 void ADescentIntoMadnessCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
-	FVector2D MovementVector = Value.Get<FVector2D>();
+	MovementVector = Value.Get<FVector2D>();
 
 	if (Controller != nullptr)
 	{
@@ -250,6 +254,16 @@ void ADescentIntoMadnessCharacter::Glide()
 		if (UmbrellaSound) {
 			UGameplayStatics::PlaySound2D(this, UmbrellaSound);
 		}
+
+		if (!IsInitialGliding) {
+			IsInitialGliding = true;
+			// get forward vector
+			const FRotator Rotation = Controller->GetControlRotation();
+			const FRotator YawRotation(0, Rotation.Yaw, 0);
+			const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+			//When gliding for the first time boost the player if the forward direction
+			GetCharacterMovement()->AddImpulse(FVector(50000 * MovementVector.Y, 50000 * MovementVector.Y, 50000 * MovementVector.Y) * ForwardDirection);
+		}
 	}
 }
 
@@ -258,7 +272,7 @@ void ADescentIntoMadnessCharacter::GlideMovement()
 	GetCharacterMovement()->AirControl = 0.9f;
 	GetCharacterMovement()->GravityScale = 0.1f;
 	GetCharacterMovement()->MaxAcceleration = 1024;
-	GetCharacterMovement()->MaxWalkSpeed = 600;
+	GetCharacterMovement()->MaxWalkSpeed = 700;
 	GetCharacterMovement()->BrakingDecelerationFalling = 350.f;
 }
 

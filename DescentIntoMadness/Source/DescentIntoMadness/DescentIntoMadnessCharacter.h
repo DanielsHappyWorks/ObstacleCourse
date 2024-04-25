@@ -93,9 +93,14 @@ public:
 
 	UPROPERTY(Category = "Gliding", EditAnywhere, BlueprintReadWrite)
 	bool IsGliding = false;
+	UPROPERTY(Category = "Gliding", EditAnywhere, BlueprintReadWrite)
+	bool IsInitialGliding = false;
 
 	UPROPERTY(EditAnywhere, Category = "Gliding")
 	USoundBase* UmbrellaSound;
+
+	UPROPERTY(Category = "Movement", EditAnywhere)
+	FVector2D MovementVector = FVector2D(0, 0);
 	
 
 protected:
