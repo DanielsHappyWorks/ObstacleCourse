@@ -90,6 +90,9 @@ void ADescentIntoMadnessCharacter::BeginPlay()
 		UHighScoreGameSave* highScoreSave  = Cast<UHighScoreGameSave>(Slot);
 		HighScore = highScoreSave->HighScore;
 	}
+
+	//Set initial camera rotation
+	GetController()->SetControlRotation(FRotator(-80, 0, 0));
 }
 
 void ADescentIntoMadnessCharacter::Tick(float DeltaTime)
